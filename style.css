@@ -1,0 +1,43 @@
+body {
+    background-color: rgb(244, 248, 251);
+}
+
+header{
+    background-color: rgb(68, 131, 169);
+    width: 100vw ; 
+    padding: 0px;
+    margin: 0;
+    position: 0;    
+}
+.article_containers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    vertical-align: baseline;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.primary_article {
+    flex: 1 1 100%;
+    margin: 0 20px 40px;
+    
+    
+}
+
+.article_containers > div {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    width: 30%;
+    min-width: 300px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 20px;
+    padding: 10px;
+    vertical-align: baseline;
+    min-height: 300px;
+    border-radius: 7px;
+    transition: all .3s ease;
+}
+
+
