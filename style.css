@@ -1,13 +1,21 @@
+
 body {
     background-color: rgb(244, 248, 251);
 }
 
-header{
+.banner{
+    position: relative;
     background-color: rgb(68, 131, 169);
-    width: 100vw ; 
-    padding: 0px;
-    margin: 0;
-    position: 0;    
+    background-size: cover;
+    padding: 10px 0px 10px 0px    
+}
+.page_title{
+    
+}
+.Site_Inner{
+    flex-wrap: flex;
+    margin: 0 5%;
+    padding: 0;
 }
 .article_containers {
     display: flex;
@@ -17,12 +25,7 @@ header{
     padding-left: 10%;
     padding-right: 10%;
 }
-.primary_article {
-    flex: 1 1 100%;
-    margin: 0 20px 40px;
-    
-    
-}
+
 
 .article_containers > div {
     background-color: rgb(255, 255, 255);
@@ -31,13 +34,113 @@ header{
     min-width: 300px;
     margin: 10px;
     text-align: center;
-    line-height: 75px;
     font-size: 20px;
-    padding: 10px;
     vertical-align: baseline;
     min-height: 300px;
     border-radius: 7px;
-    transition: all .3s ease;
+    word-wrap: break-word;
+}
+.primary_article {
+    display: flex;
+    flex: 1 1 100%;
+    flex-grow: 3;
+    
+    margin: 0 20px 40px;
+    padding: 0;
 }
 
+.primary_content{
+    flex: 1;
+    
+    text-align: center;
+    max-width: 40%;
+    padding: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 30px;
+    
+}
 
+.primary_content_image_content {
+    flex: 1;
+    
+   
+    max-width: 60%;
+    background-image: url("./images/Firewall.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 7px;
+
+}
+.primary_content_image{
+    float: left;
+    object-fit: contain;
+    max-width: 40%;
+    
+}
+.secondary_left{
+    display: flex;
+    flex: 1 1 300px;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 300px;
+
+}
+.secondary_left_content{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.secondary_left_image{
+    flex-grow: 1;
+    background-image: url("./images/NetworkTypes.jpg");
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: 60%;
+}
+.secondary_middle{
+    display: flex;
+    flex: 1 1 300px;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 300px;
+
+}
+.secondary_middle_content{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.secondary_middle_image{
+    flex-grow: 1;
+    background-image: url("./images/DNS.jpg");
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: 60%;
+}
+.secondary_right{
+    display: flex;
+    flex: 1 1 300px;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 300px;
+
+}
+.secondary_right_content{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.secondary_right_image{
+    flex-grow: 1;
+    background-image: url("./images/malware.jpg");
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: 60%;
+}
