@@ -3,17 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Network and Security Quizzes</title>    
+    <link rel="stylesheet" href="style.css">
+    <title>Network Services</title>    
 </head>    
 <body>
-    <header>
-        <h1>Network Services</h1>
+    <header class = "banner">
+        <h1 class = "page_title">Network Services</h1>
+        <nav>
+            <ul class = "site_links">
+                <a href="index.html">Home</a>
+                <a href="network_category.html">Networks</a>
+                <a href="security_category.html">Security</a>
+            </ul>
+            <ul class = "social_links">
+                <a href = "https://twitter.com">T</a>
+                <a href = "https://en-gb.facebook.com">F</a>
+                <a href = "https://www.reddit.com/">R</a>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="network_category.html">Networks</a>
-        <a href="security_category.html">Security</a>
-    </nav> 
+    <figure class = "background_image" style="background-image: url(./images/DNS.jpg);"></figure>
+    <div class = "Site_Inner"> 
+        <section class = "main_content">
+            <h3>Network Services</h3>
+            <p>There are many network services required to allow devices to communicate with each other. Each 
+                service provides a specific function.
+            </p>
+            <br>
+            <h3>DNS</h3>
+            <p>
+                DNS or Domain Name System as it is officially named can be described by using the analogy of Yellow pages: 
+                it a Container for all the addresses and businesses in that area. The same applies for a DNS as it contains 
+                lists of all the registered domain names in that specific area or group. Each domain name has a numerical value 
+                called the IP address linked to it. The majority of these IP addresses are IPV4 but the migration from this 
+                format to the IPV6 has begun so it is likely in future years to see an increase in IPV6 addresses. This value 
+                is almost never displayed to the user as it will most likely be meaningless to them and impossible to remember. 
+                As a result domain names are used as they are much easier to remember for the user but that 
+                does not mean they have no structure. 
+            </p>
+            <h3>
+                DHCP
+            </h3>
+            <p>
+                DHCP or Dynamic Host Configuration Protocol. Is protocol designed to automatically assign IP addresses
+                to PCs as they connect to the network. This helps managing lots of PCS as the admin will not have
+                set static IPs. the DHCP will often have a limited amount of addesses avaialbe to it this is called the Protocol.
+                In order to stop running out of addresses in the Pool the DHCP will assign a lease to each address
+                after the lease expires the address is returned to the pool.
+            </p>
+            <h3>
+                ARP
+            </h3>
+            <p>
+                ARP or Address Resolution Protocol is a layer 2 protocol that initialises before DHCP to Broadcast
+                the devices MAC address across the network to any other device listening. From this broadcast the MAC
+                address gets added to the ARP cache which assigns the MAC address to the relevant IP address
+                to allow local communication over the network.
+            </p>
+
+        </section>
+    </div>
+
 </body>
 </html>
 <!--https://stephenpark2000.github.io/WebTech/-->

@@ -3,17 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Network and Security Quizzes</title>    
+    <link rel="stylesheet" href="style.css">
+    <title>Network Types</title>    
 </head>    
 <body>
-    <header>
-        <h1>Network Types</h1>
+    <header class = "banner">
+        <h1 class = "page_title">Network Types</h1>
+        <nav>
+            <ul class = "site_links">
+                <a href="index.html">Home</a>
+                <a href="network_category.html">Networks</a>
+                <a href="security_category.html">Security</a>
+            </ul>
+            <ul class = "social_links">
+                <a href = "https://twitter.com">T</a>
+                <a href = "https://en-gb.facebook.com">F</a>
+                <a href = "https://www.reddit.com/">R</a>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="network_category.html">Networks</a>
-        <a href="security_category.html">Security</a>
-    </nav> 
+    <figure class = "background_image" style="background-image: url(./images/NetworkTypes.jpg);"></figure>
+    <div class = "Site_Inner"> 
+        <section class = "main_content">
+            <h3>Network Types</h3>
+            <p>
+                There are many different types of networks being used in business, homes and governments. But what
+                is a network? A network is simply a series of connected computers that can communicate with each other.
+            </p>
+            <h4>LAN</h4>
+            <p>
+                LAN or Local Area Network is the most common type of network found in almost every home in this 
+                day and age.
+            </p>
+            <h4>WAN</h4>
+            <p>
+                WAN or Wide area Network as the name suggest is a network much larger than a LAN infact it may often
+                consist of other LANS. The most popular WAN is known as the internet however many large business'
+                and governments may use WANs to privately link their LANs.
+            </p>
+            <h3>
+                Network Topologies
+            </h3>
+            <p>
+                Topogies describe how a network is structured. The following paragraphs will describe the most common
+                topologies.
+            </p>
+            <h4>
+                Star
+            </h4>
+            <p>
+                The Star network topology is very common, found in almost every home. It consists of a central point 
+                typically a router or switch will all the other devices branching off from this point on their own
+                dedicated connection.
+                <br>
+                This allows the network to be somewhat resiliant to failure as a device may fail
+                and not interrupt the function of the network. It also ensures that each connected device is
+                not sharing internal bandwidth with other devices.
+                <br>
+                This is not completely resiliant as if the central point fails the entire network will collapse.
+            </p>
+            <h4>
+                Ring
+            </h4>
+            <p>
+                The Ring topology is very old and is rarely used anymore. It consists of a devices
+                connected in a loop. They each take turns to send the data. This network is rarely used
+                now but can be found in some very old finacial intitutions.
+                <br>
+                This network can be quite cheap to setup as it conly requires a single cable to fucntion.
+                <br>
+                It is very easily broken. if any device fails the entire loop collapses.
+            </p>
+            <h4>
+                Mesh
+            </h4>
+            <p>
+                Mesh networks are becoming more popular thanks to Mesh wifi access points. It can be found in homes
+                but is quite popular in businesses. it consists of many branches coneccting to each other much like
+                a spider's web with each devices maybe getting 2 connections atleast.
+                <br>
+                This network os very resiliant to failure as if any device fails it can quickly failover
+                to the other connection making it a good pick for businesses.
+                <br>
+                However this network is very expensive to install and configure, requires alot of cable and some 
+                clever routing protocols.
+            </p>
+        </section>
+    </div>
+
 </body>
 </html>
 <!--https://stephenpark2000.github.io/WebTech/-->
