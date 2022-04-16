@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Security Topics</title>    
+    <script src="scripts/main.js" defer></script>
+    <title>Firewalls</title>    
 </head>    
 <body>
     <header class = "banner">
-        <h1 class = "page_title">Security Topics</h1>
+        <h1 class = "page_title">Firewalls</h1>
         <nav>
             <ul class = "site_links">
                 <a href="index.html">Home</a>
@@ -25,9 +26,21 @@
     <figure class = "background_image" style="background-image: url(./images/Firewall.jpg);"></figure>
     <div class = "Site_Inner"> 
         <section class = "main_content">
-            <h3>This is some title</h3>
-            <p>some more text</p>
+            <h3>Firewall</h3>
+            <p>The general purpose of a Firewall is to sift through all incoming traffic in order to protect the internal network, the strictness of the protocols used to determine if the packets flowing through are genuine can be determined by the network administrator. For example, a firewall may prevent all adobe web services due to the security risks associated with that technology. While this is a basic overview a firewall can be broken down into four distinct groups:
+                Packet filtering as the name suggests involves sifting through the incoming packets to find any errors in the packet’s destination and origin IP, Port and transfer protocol. This is probably one of the most cost-effective way of securing a LAN from external attacks as it is very difficult to pass all of these checks to gain access to the internal system. However, it is not effective at stopping internal attacks as it has no way of analysing internal network traffic furthermore, they operate only on the network layer of the OSI model meaning the network can still be attacked at the other layers for example the session layer.
+                <h4>Circuit level Firewall</h4>
+                Circuit level Firewalls are found at the session layer of the OSI model, the job of this is to analyse all the TCP handshakes to ensure no spoofing is going on that would suggest that the connection being established is illegitimate this is all done before the connection is established so the handshaking event can be aborted before packets are sent. The same observation of handshaking events occurs for UDP as well as TCP. One of the main benefits of this firewall is that it allows the host network to remain anonymous to the delivering server or user making it much harder to pin down the server location, essentially working like a proxy server. The main issue with this type of firewall is its lack of packet filtering which only happens at the handshake event and not during the data transmission period meaning that an attacker could manipulate the data after the handshake event has occurred and attack the internal systems.
+                <h4>Application level Gateway</h4>
+                Application level gateway this is found on the application layer of the OSI model and is then used as an intermediate device between the client and server communication. This is often used when a user makes use of services provided by an external network that is not trusted, the ALG then verifies the client’s credentials to ensure it isn’t spoof and proceeds through a proxy server to request and receive the data from the external network. The ALG can be given protocols to follow for what data to allow for example in an email example if the character limit is too high the ALG will deny the transmission.
+                <h4>Stateful Multilayer</h4>
+                Stateful Multilayer inspection firewall is the final type of firewall I will discuss and is a combination of all the previously mentioned types as suggested my the “multilayer” title. However, it also expands on the previous types as can been seen in the packet filtering layer which can now analyse the packets down to the application layer, this allows a much more secure network when compared to standard packet filtering. Another benefit is the ability to close off all the unused ports on the router so that they only open upon request making techniques like port scanning ineffective when attacking a network.
+            </p>
         </section>
+        <button id = "firewall_quiz_bttn">
+            Take the Quiz!
+            
+        </button>
     </div>
 
 </body>

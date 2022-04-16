@@ -77,6 +77,33 @@ nav {
     border-radius: 7px;
     word-wrap: break-word;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+@media screen and (max-width: 800px) {
+    .primary_article{
+        display: flex;
+        flex: 1 1 300px;
+        flex-direction: column;
+        overflow: hidden;
+        min-height: 300px;
+        transition: transform .3s;
+    }
+    
+    .primary_content{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .primary_content_image_content{
+        flex-grow: 1;
+        background-image: url("./images/NetworkTypes.jpg");
+        background-size: cover;
+        background-position: center;
+        width: auto;
+        height: 60%;
+        border-radius: 7px;
+    }
 }
 .primary_article {
     display: flex;
@@ -85,20 +112,20 @@ nav {
     
     margin: 0 20px 40px;
     padding: 0;
+    transition: transform .3s;
 }
-
+.primary_article:hover{
+    transform: scale(1.02);   
+}
 .primary_content{
     flex: 1;
-    
     text-align: center;
     max-width: 40%;
     padding: 2%;
     margin-top: 1%;
     margin-bottom: 1%;
     font-size: 30px;
-    
 }
-
 .primary_content_image_content {
     flex: 1;
     max-width: 60%;
@@ -106,14 +133,12 @@ nav {
     background-size: cover;
     background-position: center;
     border-radius: 7px;
-
 }
 .primary_content_image{
     float: left;
     object-fit: contain;
     max-width: 40%;
     border-radius: 7px;
-    
 }
 .secondary_left{
     display: flex;
@@ -121,7 +146,10 @@ nav {
     flex-direction: column;
     overflow: hidden;
     min-height: 300px;
-
+    transition: transform .3s;
+}
+.secondary_left:hover{
+    transform: scale(1.02); 
 }
 .secondary_left_content{
     flex-grow: 1;
@@ -144,7 +172,10 @@ nav {
     flex-direction: column;
     overflow: hidden;
     min-height: 300px;
-
+    transition: transform .3s;
+}
+.secondary_middle:hover{
+    transform: scale(1.02); 
 }
 .secondary_middle_content{
     flex-grow: 1;
@@ -167,7 +198,10 @@ nav {
     flex-direction: column;
     overflow: hidden;
     min-height: 300px;
-
+    transition: transform .3s;
+}
+.secondary_right:hover{
+    transform: scale(1.02); 
 }
 .secondary_right_content{
     flex-grow: 1;
@@ -255,4 +289,52 @@ nav {
         max-width: 60%;
         left: 15%
     }
+    .quiz_containter{
+        font-size: 1rem;;
+        margin-top: 20px;
+        max-width: 60%;
+        left: 15%
+    }
 }
+.quiz_containter{
+   
+    position: relative;
+    padding: 70px 5% 5%;
+    min-height: 230px;
+    font-family: Georgia,serif;
+    font-size: 2.0rem;
+    line-height: 1.6em;
+    background: #fff;
+    margin-top: 20px;
+    max-width: 50%;
+    left: 20%;
+    right: 10%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-row: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-content: center;
+}
+/*Design code for the answer blocks was inspired by this example by Matt Windle on codepen:
+https://codepen.io/MattWindle/pen/perZRG */
+.answer_box{
+    background-color:rgb(94, 83, 248);
+    padding:20px;
+    border-radius:10px;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    font-family:sans-serif;
+    transition: transform .3s;
+}
+.answer_box:hover{
+    transform: scale(1.02);
+    background-color: aqua;
+}
+
+

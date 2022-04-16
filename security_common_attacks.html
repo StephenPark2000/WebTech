@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="scripts/main.js" defer></script>
     <title>Common Attacks</title>    
 </head>    
 <body>
@@ -25,9 +26,35 @@
     <figure class = "background_image" style="background-image: url(./images/Malware.jpg);"></figure>
     <div class = "Site_Inner"> 
         <section class = "main_content">
-            <h3>This is some title</h3>
-            <p>some more text</p>
+            <h3>Malware</h3>
+            <p>
+                Malware is blanked term to describe any malicious software that has been designed to cause purposeful damage to a system. Malware can come in many forms: worms, viruses, Trojan horses, spyware and ransomware to name a few. 
+            </p>
+            <h4>Viruses</h4>
+            <p>
+                Viruses are the most common form of malware and probably the most well-known at the moment. A virus latches its self on to a program, document or a boot folder and once that object is interacted with virus then replicates itself latching on to more files. Even so there are several sub-types of viruses designed to cause harm such as the over-write virus which destroys a user’s files, polymorphic which can edit its base code without changing the functions and a resident virus which embeds itself in the RAM of the system. 
+            </p>
+            <h4>Worm</h4>
+            <p>    
+                A worm is essentially the same as a virus apart from one key difference which is that it can self-replicate without any trigger. 
+            </p>
+            <h4>Trojan Horses</h4>
+            <p>    
+                Trojan horses are typically programs disguised as another program that the user desires hence the name Trojan horse in reference to the battle of troy. Once downloaded and executed the program will then commence it malicious tasks by usually installing some type of malware or can even open the system up for a remote access attack. 
+            </p>
+            <h4>Spyware</h4>
+            <p>
+                Spyware can move from system to system much a like a worm or virus however unlike both the aim is to remain undetected and to record and transmit and key entries to a host system this can include card information. 
+            </p>
+            <h4>Ransomware</h4>
+            <p>
+                Final type of malware I am going to address is ransomware, this software moves from system to system like a worm or virus but instead of access, editing or deleting files it can encrypt these files with a very hard to crack encryption technique typically symmetric encryption as it happens fast so it can’t be detected as easily and ca happen while the user is still making use of the system. One of the most infamous cyber-attacks to occur was the “WannaCry” attack. This attack targeted NHS systems which were vastly outdated in terms of security as a result the system was breached and caused the cancelation of at least 6900 appointments
+            </p>
         </section>
+        <button id = "common_attacks_quiz_bttn">
+            Take the Quiz!
+            
+        </button>
     </div>
 
 </body>
