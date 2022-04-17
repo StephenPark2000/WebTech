@@ -357,4 +357,19 @@ https://codepen.io/MattWindle/pen/perZRG */
     transform: scale(1.02);
     background-color: aqua;
 }
+.question_title{
+    position: relative;
+    padding: 1% 1%;
+    font-family: Georgia,serif;
+    font-size: 2.0rem;
+    line-height: 1.6em;
+    background: #fff;
+    margin-top: 20px;
+    max-width: 50%;
+    left: 24%;
+    right: 10%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
 

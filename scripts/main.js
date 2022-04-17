@@ -6,16 +6,33 @@ var json_link = "https://stephenpark2000.github.io/WebTech/scripts/question_bank
 
 quiz_open()
 //Opens the relevant quiz as object
-function quiz_open(){
-    var question_bank = fetch(json_link)
-        .then(response => {return response.json()})
-        .then(jsondata => console.log(jsondata));
 
-
+async function quiz_open(){
     let quiz_chosen = sessionStorage.getItem("quiz_id");
-    console.log(quiz_chosen)
-    console.log(question_bank["quiz"])
-
+    const question_bank = await fetchJson(json_link)
+    var active_quiz = question_bank[quiz_chosen]
+    input_html(active_quiz)
+    var test = JSON.stringify(active_quiz)
+    console.log(test["question"])
 }
 
 
+
+
+
+function input_html(active_quiz){
+    console.log(active_quiz[1])
+    document.querySelector("#question_title").innerHTML = JSON.stringify(active_quiz[0])
+}
+
+async function fetchJson(json_link) {
+    try {
+        const response = await fetch(json_link, {
+            method: 'GET',
+        });
+        const exam = await response.json();
+        return exam;
+    } catch (error) {
+        console.error(error);
+    }
+}
