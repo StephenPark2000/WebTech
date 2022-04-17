@@ -336,5 +336,25 @@ https://codepen.io/MattWindle/pen/perZRG */
     transform: scale(1.02);
     background-color: aqua;
 }
-
+.quiz_footer{
+    display:flex;
+    justify-content: center;
+    padding: 20px;
+}
+.next_button{
+    background-color:rgb(94, 83, 248);
+    padding:20px;
+    border-radius:10px;
+    color:#fff;
+    display:flex;
+    
+    justify-content:center;
+    font-size:40px;
+    font-family:sans-serif;
+    transition: transform .3s;
+}
+.next_button:hover{
+    transform: scale(1.02);
+    background-color: aqua;
+}
 

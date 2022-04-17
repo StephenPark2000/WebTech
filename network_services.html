@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="scripts/main.js" defer></script>
+    <!--<script src="scripts/main.js" defer></script>-->
     <title>Network Services</title>    
 </head>    
 <body>
@@ -68,7 +68,23 @@
             
         </button>
     </div>
+    <script>
+        const network_services_bttn = document.getElementById("network_services_quiz_bttn");
+        network_services_bttn.addEventListener("click", quiz_selection);
 
+        //adds quiz id to session storage, redirects to quiz.html
+        function quiz_selection(evt){
+            var id = evt.target.id
+            if (id = network_services_bttn){
+                sessionStorage.setItem("quiz_id", "network_services_quiz");
+                console.log(sessionStorage.getItem("quiz_id"))
+                location.href="quiz.html";
+            }
+            else {
+                window.alert("There has been an error please come back later") 
+            }
+        }
+    </script>
 </body>
 </html>
 <!--https://stephenpark2000.github.io/WebTech/-->
