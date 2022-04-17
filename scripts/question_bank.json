@@ -1,5 +1,4 @@
 {
-	
 	"network_services": {
 		"0": {
 			"question": "Which of these is a layer two protocol",
@@ -168,8 +167,4 @@
 			"answer": "Virus"
 		}
 	}
-		
-	
-		
-	
 }
