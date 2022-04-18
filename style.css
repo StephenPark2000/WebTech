@@ -321,7 +321,7 @@ nav {
 /*Design code for the answer blocks was inspired by this example by Matt Windle on codepen:
 https://codepen.io/MattWindle/pen/perZRG */
 .answer_box{
-    background-color:rgb(94, 83, 248);
+    background-color:#4483a9;
     padding:20px;
     border-radius:10px;
     color:#fff;
@@ -340,6 +340,9 @@ https://codepen.io/MattWindle/pen/perZRG */
     display:flex;
     justify-content: center;
     padding: 20px;
+}
+#button_a:active{
+    background-color: #2b7a3e;
 }
 .next_button{
     background-color:rgb(94, 83, 248);
