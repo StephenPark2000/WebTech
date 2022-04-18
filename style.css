@@ -1,60 +1,73 @@
 
 body {
     background-color: rgb(236, 236, 236);
+    margin:0px;
+    font-family: "Roboto", sans-serif;
+    color:  rgb(25, 25, 25)
 }
 p {
     padding: 5px;
 }
-.banner{
-    position: relative;
-    background-color: rgb(68, 131, 169);
-    background-size: cover;
-    padding: 10px 5% 10px 5%;
-    z-index: -1;
+a{
+    text-decoration: none;
+    color: inherit
 }
 .page_title{
+    display: flex;
+    justify-content: center;
     font-size: 40px;
     text-align: center;
-    min-height: 10%;
-    padding: 1% 0 1% 0;
+    padding: 10px 0 10px 0;
 }
-nav {
+.site_links{
     display: flex;
-    flex-direction: row;
-    margin: auto;
-    position: relative;
-    top: -20px;
-    padding: 0px 0% 0px 0%;
+    list-style-type: none;
+    margin: 0;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0f324c;
     
-    max-width: 79%;
+  }
+  
+
+/* adapted from https://www.w3schools.com/css/css_navbar.asp */
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    transition: all .15s ease-in-out;
+    font-size: 20px;
+    text-transform: uppercase;
 }
-.site_links {
+
+li a:hover {
+    background-color: rgb(0, 108, 138);
+}
+.nav_centered{
+    position: absolute;
+    float: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+.quiz_Inner{
     display: flex;
-    flex: 0 1 50%;
-    flex-direction: row;
-    justify-content: space-between;
-    
-}
-.site_links > a {
-    flex: 1 1 100%;
-}
-.social_links {
-    
-    display: flex;
-    flex: 1 1 100%;
-    flex-direction: row;
-    max-width: 10%;
-    flex-shrink: 0;
-    margin-left: auto;
-    justify-content: space-between;
-}
-.social_links > a {
-    flex: 1 1 100%;
-}
-.Site_Inner{
-    flex-wrap: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 0 5%;
     padding: 0;
+}
+  
+.Site_Inner{
+    display: flex;
+    justify-content: center;
+    margin: 0 5%;
+    padding: 0;
+    flex-direction: column;
 }
 .article_containers {
     display: flex;
@@ -64,12 +77,21 @@ nav {
     padding-left: 10%;
     padding-right: 10%;
 }
-.article_containers > div {
+
+.article_containers >a:hover{
+    transform: scale(1.02);   
+}
+
+.primary_article {
+    display: flex;
+    flex: 1 1 100%;
+    flex-grow: 3;
+    transition: transform .3s;
     background-color: rgb(255, 255, 255);
     text-align: center;
     width: 30%;
     min-width: 300px;
-    margin: 10px;
+    margin: 20px;
     text-align: center;
     font-size: 20px;
     vertical-align: baseline;
@@ -77,46 +99,8 @@ nav {
     border-radius: 7px;
     word-wrap: break-word;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    
 }
-@media screen and (max-width: 800px) {
-    .primary_article{
-        display: flex;
-        flex: 1 1 300px;
-        flex-direction: column;
-        overflow: hidden;
-        min-height: 300px;
-        transition: transform .3s;
-    }
-    
-    .primary_content{
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .primary_content_image_content{
-        flex-grow: 1;
-        background-image: url("./images/NetworkTypes.jpg");
-        background-size: cover;
-        background-position: center;
-        width: auto;
-        height: 60%;
-        border-radius: 7px;
-    }
-}
-.primary_article {
-    display: flex;
-    flex: 1 1 100%;
-    flex-grow: 3;
-    
-    margin: 0 20px 40px;
-    padding: 0;
-    transition: transform .3s;
-}
-.primary_article:hover{
-    transform: scale(1.02);   
-}
+
 .primary_content{
     flex: 1;
     text-align: center;
@@ -134,28 +118,35 @@ nav {
     background-position: center;
     border-radius: 7px;
 }
-.primary_content_image{
-    float: left;
-    object-fit: contain;
-    max-width: 40%;
-    border-radius: 7px;
-}
+
 .secondary_left{
     display: flex;
     flex: 1 1 300px;
     flex-direction: column;
     overflow: hidden;
-    min-height: 300px;
     transition: transform .3s;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    width: 30%;
+    min-width: 300px;
+    margin: 20px;
+    text-align: center;
+    font-size: 20px;
+    vertical-align: baseline;
+    min-height: 500px;
+    border-radius: 7px;
+    word-wrap: break-word;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.secondary_left:hover{
-    transform: scale(1.02); 
-}
+
 .secondary_left_content{
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.secondary_left_content_brief{
+    padding: 0px 15px 0px 15px;
 }
 .secondary_left_image{
     flex-grow: 1;
@@ -166,23 +157,7 @@ nav {
     height: 60%;
     border-radius: 7px;
 }
-.secondary_middle{
-    display: flex;
-    flex: 1 1 300px;
-    flex-direction: column;
-    overflow: hidden;
-    min-height: 300px;
-    transition: transform .3s;
-}
-.secondary_middle:hover{
-    transform: scale(1.02); 
-}
-.secondary_middle_content{
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+
 .secondary_middle_image{
     flex-grow: 1;
     background-image: url("./images/DNS.jpg");
@@ -192,23 +167,8 @@ nav {
     height: 60%;
     border-radius: 7px;
 }
-.secondary_right{
-    display: flex;
-    flex: 1 1 300px;
-    flex-direction: column;
-    overflow: hidden;
-    min-height: 300px;
-    transition: transform .3s;
-}
-.secondary_right:hover{
-    transform: scale(1.02); 
-}
-.secondary_right_content{
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+
+
 .secondary_right_image{
     flex-grow: 1;
     background-image: url("./images/malware.jpg");
@@ -264,21 +224,20 @@ nav {
     
   }
   .main_content {
-    position: relative;
-    padding: 70px 5% 0;
+    flex-basis: auto;
+    align-self: center;
+    padding: 70px 5% 30px;
     min-height: 230px;
-    font-family: Georgia,serif;
-    font-size: 2.0rem;
+    font-size: 24px;
     line-height: 1.6em;
     background: #fff;
-    margin-top: -400px;
-    max-width: 50%;
-    left: 20%;
-    right: 10%;
+    margin-top: -300px;
+    max-width: 1000px;
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
   }
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
     .background_image{
         height: 400px;
         
@@ -295,6 +254,36 @@ nav {
         max-width: 60%;
         left: 15%
     }
+    .primary_article{
+        display: flex;
+        flex: 1 1 300px;
+        flex-direction: column;
+        overflow: hidden;
+        transition: transform .3s;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        width: 30%;
+        min-width: 300px;
+        margin: 20px;
+        text-align: center;
+        font-size: 20px;
+        vertical-align: baseline;
+        min-height: 500px;
+        border-radius: 7px;
+        word-wrap: break-word;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    }
+    .primary_content_image_content{
+        flex-grow: 1;
+        background-image: url("security_firewalls.html");
+        background-size: cover;
+        background-position: center;
+        width: auto;
+        height: 60%;
+        border-radius: 7px;
+    }
+    
 }
 .quiz_containter{
    
@@ -328,7 +317,7 @@ https://codepen.io/MattWindle/pen/perZRG */
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:40px;
+    font-size:30px;
     font-family:sans-serif;
     transition: transform .3s;
 }
@@ -376,3 +365,7 @@ https://codepen.io/MattWindle/pen/perZRG */
     
 }
 
+.hidden{
+    visibility:hidden; 
+    display:none;
+}

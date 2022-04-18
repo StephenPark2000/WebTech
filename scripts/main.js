@@ -2,11 +2,12 @@ var json_link = "https://stephenpark2000.github.io/WebTech/scripts/question_bank
 const next_button = document.getElementById("next_button");
 var counter = 0
 main()
+
 async function main(){    
     var question_bank = await open_json()
     build_html(counter, question_bank )
     //answer_listener(counter, question_bank)
-    document.body.addEventListener('click', function (evt) {
+    await   document.body.addEventListener('click', function (evt) {
         if (evt.target.className === 'answer_box') {
             let id = evt.target.id
             check_answer(counter, question_bank, id)
