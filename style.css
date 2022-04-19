@@ -12,13 +12,13 @@ a{
     text-decoration: none;
     color: inherit
 }
-header{
+
+.banner{
     position: -webkit-sticky;
 	position: sticky;
 	top: 0;
     z-index: 10;
 }
-
 .page_title{
     display: flex;
     justify-content: center;
@@ -319,6 +319,7 @@ https://codepen.io/MattWindle/pen/perZRG */
     margin-left: 30%;
     margin-right: 30%;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 .open_quiz_bttn:hover{
     transform: scale(1.03);
