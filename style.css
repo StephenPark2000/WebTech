@@ -325,7 +325,7 @@ https://codepen.io/MattWindle/pen/perZRG */
     transform: scale(1.03);
     background-color: rgb(0, 108, 138)
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
     .open_quiz_bttn{
         font-size: 20px;
     }
