@@ -3,10 +3,13 @@ const next_button = document.getElementById("next_button");
 var counter = 0
 main()
 
+//initialising function
 async function main(){    
     var question_bank = await open_json()
+    if(question_bank == null){
+        main()
+    }
     build_html(counter, question_bank )
-    //answer_listener(counter, question_bank)
     await   document.body.addEventListener('click', function (evt) {
         if (evt.target.className === 'answer_box') {
             let id = evt.target.id
@@ -15,12 +18,8 @@ async function main(){
         else(false)
     });
     counter++
-    
     next_button.onclick = function() {next_question(question_bank)}
-    
-
 }
-
 
 //listens and checks if an answer button has been clicked
 function answer_listener(question_bank){
@@ -48,6 +47,10 @@ function check_answer(counter, question_bank, id){
 function next_question(question_bank){
     if (counter == Object.keys(question_bank).length){
         console.log("Complete")
+        if (window.confirm("Congrats you finsihed the quiz!\nDo you want to return Home?")) {
+            location.href="index.html";
+        }
+          
     }
     
     if (counter < Object.keys(question_bank).length){
@@ -74,26 +77,29 @@ function build_html(question_counter, question_bank){
     document.getElementById("button_d").removeAttribute("style")
 }
 
-//parses json and applies key for relevant questions
-async   function open_json(){
-        await fetch_json();
+//fetches json from github
+async   function fetch_json(){
+        try {
+            let response = await fetch(json_link, {method: 'GET'});
+            let test = await response.json();
+            return test;
+        } catch (error) {
+            console.error(error);
+        }
+    }
 
+//checks if json exists and parses it in object
+async function open_json(){
+    if (sessionStorage.getItem("Quiz") !==null){
         let json = JSON.parse(sessionStorage.getItem("Quiz"));
         let question = sessionStorage.getItem("quiz_id");
-        let target_questions = json[question] 
-        console.log("opened json success");
-        return target_questions;
+        const target_questions = json[question] 
+        return target_questions
     }
-
-//https://www.w3schools.com/js/js_json_server.asp
-//I had so much trouble with the fetch api but this worked hense its here and not fetch
-async   function fetch_json(){
-        const xmlhttp = new XMLHttpRequest();
-        xmlhttp.onload = function() {
-            sessionStorage.setItem("Quiz",this.responseText)
-        };
-        xmlhttp.open("GET", json_link);
-        xmlhttp.send();
-        console.log("Fetch Succeeded")
-        
+    else{
+        let get_json = await fetch_json();
+        get_json = JSON.stringify(get_json)
+        sessionStorage.setItem("Quiz",get_json)
+        open_json()
     }
+}
